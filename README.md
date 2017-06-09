@@ -1,4 +1,4 @@
-# UpdateStatusOnFacebook
+# StatusUpdate
 
 This project will post a random quote from your quote folder (i.e. present on your device) in your Facebook timeline on just one click.
 To do the same you have to follow these steps as given below- 
