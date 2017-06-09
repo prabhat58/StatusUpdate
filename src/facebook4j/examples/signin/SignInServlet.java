@@ -40,36 +40,15 @@ public class SignInServlet extends HttpServlet {
         	File[] listOfFiles = folder.listFiles();
         	int len = listOfFiles.length;
         	
-        	int hash[] = new int[len];
-        	for(int i=0;i<hash.length;i++){
-        		hash[i] = 0;
-        	}
-        	
         	Random rand = new Random();
-        	int n = rand.nextInt(len-1) + 0;
-        	
-        	boolean flag = true;
-        	
-        	
+        	int  n = rand.nextInt(len-1) + 0;
         	/*for (int i = 0; i < listOfFiles.length; i++) {
         	      if (listOfFiles[i].isFile()) {
-        	        System.out.println("File " + listOfFiles[i].getName());
-        	      } else if (listOfFiles[i].isDirectory()) {
-        	        System.out.println("Directory " + listOfFiles[i].getName());
-       	      }
-       	    }*/  // Just to check number of quotes available.
-        	
-        	while(flag == true){
-        		if(hash[n]== 1){
-        			Random rand1 = new Random();
-                	n = rand1.nextInt(len-1) + 0;
-        		}
-        		else{
-        			hash[n] = 1;
-        			flag = false;
-        		}
-        			
-        	}
+       	        System.out.println("File " + listOfFiles[i].getName());
+       	      } else if (listOfFiles[i].isDirectory()) {
+       	        System.out.println("Directory " + listOfFiles[i].getName());
+        	      }
+       	    }*/   //Just to check number of quotes available.
         	
         	Media media=new Media(listOfFiles[n]);
         	
@@ -82,3 +61,4 @@ public class SignInServlet extends HttpServlet {
         response.sendRedirect("success.jsp");
     }
 }
+
